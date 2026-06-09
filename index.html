@@ -1,0 +1,55 @@
+﻿<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.6, user-scalable=no, minimum-scale=0.6, maximum-scale=1.0" />
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="格蘭企業入口網，提供內部人事、學習、教學、資源平台等服務">
+    <meta name="keywords" content="格蘭,入口網站,企業平台,人事系統,學習系統,格蘭冒險島,教學平台">
+    <meta name="author" content="Gram Enterprise">
+
+    <title>Gram 入口網站</title>
+
+    <meta property="og:locale" content="zh_TW">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="格蘭企業入口網">
+    <meta property="og:title" content="格蘭企業入口網｜OP 系統">
+    <meta property="og:description" content="整合人事、教學、學習、資源的平台入口">
+    <meta property="og:url" content="https://op.gram.tw/">
+    <meta property="og:image" content="https://op.gram.tw/og/gram-op-cover.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="格蘭企業入口網｜OP 系統">
+    <meta name="twitter:description" content="整合人事、學習、教學與資源平台的整合入口">
+    <meta name="twitter:image" content="https://op.gram.tw/og/gram-op-cover.jpg">
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* 防止滾動條出現 */
+            box-sizing: border-box;
+        }
+
+        #top-frame {
+            height: 80px;
+            width: 100%;
+        }
+        #main-frame {
+            width: 100%;
+            height: calc(100% - 80px); /* 扣除上方 iframe 的高度 */
+        }
+        iframe {
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <iframe src="left.html" id="top-frame" scrolling="no"></iframe>
+    <iframe src="main.html" id="main-frame"></iframe>
+</body>
+</html>

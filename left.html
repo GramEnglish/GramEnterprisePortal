@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="格蘭企業入口網，提供內部人事、學習、教學、資源平台等服務" />
+  <meta name="keywords" content="格蘭,入口網站,企業平台,人事系統,學習系統,格蘭冒險島,教學平台" />
+  <meta name="author" content="Gram Enterprise" />
+  <title>Gram Portal 左側選單</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Helvetica Neue", Arial, Helvetica, sans-serif; }
+
+    nav {
+      width: 100%;
+      height: 80px;
+      background-image: url("imgs/navbg.png");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .logo { width: 220px; max-width: 40vw; transition: transform .3s ease; }
+    .logo:hover { transform: scale(1.06); }
+
+    .header-right { display: flex; align-items: center; gap: 16px; white-space: nowrap; }
+    .social-icons { display: flex; gap: 14px; font-size: 34px; }
+    .social-icons a { color: #fff; text-decoration: none; transition: transform .25s, color .25s; }
+    .social-icons a:hover { transform: scale(1.15); }
+    .social-icons a.fb:hover { color: #3b5998; }
+    .social-icons a.yt:hover { color: #ff0000; }
+
+    #date-time { font-size: 14px; opacity: .9; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="https://www.gram.com.tw/" target="_blank" rel="noopener">
+      <img src="imgs/newlogo.png" alt="Gram Logo" class="logo" />
+    </a>
+
+    <div class="header-right">
+      <span id="date-time"></span>
+      <div class="social-icons">
+        <a class="fb" href="https://www.facebook.com/GRAM1980/" target="_blank" rel="noopener" aria-label="Facebook">
+          <i class="fa-brands fa-square-facebook"></i>
+        </a>
+        <a class="yt" href="https://www.youtube.com/@gramenglish" target="_blank" rel="noopener" aria-label="YouTube">
+          <i class="fa-brands fa-square-youtube"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    // 顯示日期（例：週五, 2025年9月5日）
+    function updateDateTime() {
+      const now = new Date();
+      const formatted = now.toLocaleDateString("zh-TW", {
+        weekday: "short", year: "numeric", month: "long", day: "numeric"
+      });
+      const el = document.getElementById("date-time");
+      if (el) el.textContent = formatted;
+    }
+    updateDateTime();
+  </script>
+</body>
+</html>
